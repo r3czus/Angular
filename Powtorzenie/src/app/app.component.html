@@ -1,22 +1,27 @@
 <h1>Siemaneczko{{title}}</h1>
 <!-- interpolacja -->
-<img src="assets/Images/zdj2.jpg"  alt="zdj" srcset="" *ngIf="aktywne else brakZdj">
+<img src="assets/Images/zdj2.jpg" alt="zdj" srcset="" *ngIf="aktywne else brakZdj">
 <br>
 <img src="{{urlzdj3}} " *ngIf="aktywne else brakZdj"> <!-- tak wyswitla sie zjd -->
-<img [src]="urlzdj2" *ngIf="aktywne else brakZdj" ><!-- tak wyswitla sie zjd -->
-<button type="button" (click)="Zobacz()" >Zmien</button>
+<img [src]="urlzdj2" *ngIf="aktywne else brakZdj"><!-- tak wyswitla sie zjd -->
+<button type="button" (click)="Zobacz()">Zmien</button>
 <ng-template #brakZdj>
-  <img  src="{{brak}}">
+  <img src="{{brak}}">
 </ng-template>
 <br>
 <br>
 <br>
 <button type="button" (click)="zwieksz()">{{licznik}}</button><!-- ()<- te wiazanie od html do ts -->
-<input type="number" [(ngModel)]="licznik" > <!-- zeby uzywać ng model czyli cos takiego [()] który wymienia wartosc z zmieną i z tym co się wyświtla musiś dodać w app modules.ts coś takiego w inportach  FormsModule -->
+<input type="number" [(ngModel)]="licznik">
+<!-- zeby uzywać ng model czyli cos takiego [()] który wymienia wartosc z zmieną i z tym co się wyświtla musiś dodać w app modules.ts coś takiego w inportach  FormsModule -->
 <br>
 <h4>nowe</h4>
+
+<h2 [ngStyle]="{'background-color':kolory[wybrany]}">KursyProgramowanie</h2>
 <ol>
   <li *ngFor="let kurs of kursyProgramowanie">
     {{kurs}}
   </li>
 </ol>
+<br>
+<button type="button" (click)="Formatuj()">Zmien Kolor</button>
