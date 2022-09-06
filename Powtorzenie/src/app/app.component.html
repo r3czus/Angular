@@ -24,4 +24,24 @@
   </li>
 </ol>
 <br>
-<button type="button" (click)="Formatuj()">Zmien Kolor</button>
+<button type="button" (click)="Formatuj()">Zmien Kolor</button> <!-- tu jest formotowanie  -->
+<h3>Akapity zmiana z kasach z css</h3>
+<p class="a b"> Pierwsz teks z kalsą c</p>
+<!-- control shift plus ` <- to otwiera terminal w cc -->
+<!-- alt control f poprawia kod -->
+ <!-- npx ng g c kurs do towrzenia klass -->
+
+
+
+<h2>Mleko123</h2>
+<br>
+<br>
+ <p>Wybierz kurs którego szczegóły chcesz wyświtlić </p>
+ <select [(ngModel)]="wybranyKurs">
+  <option *ngFor="let kurs of kursyProgramowanie">
+    {{kurs}}
+  </option>
+ </select>
+ <app-kurs>
+  <!-- zeby wyswietlić app dajesz app- i nazwa tej klasy -->
+ </app-kurs>

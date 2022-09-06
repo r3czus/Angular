@@ -15,7 +15,8 @@ export class AppComponent {
   licznik: number = 1;
   brak: string = "assets/Images/noPicture.jpg";
   wybrany: number = 0;
-  kolory: string[] = ["red", "blue", "green", "purple"]
+  kolory: string[] = ["red", "blue", "green", "purple"];
+  wybranyKurs:number=0;
 
 
   zwieksz(): void {
@@ -30,4 +31,6 @@ export class AppComponent {
       this.wybrany = 0;
     }
   }
+  
 }
+
