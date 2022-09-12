@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Szkolenia } from './Szkolenia_1';
+import { Szkolenie } from './szkolenie';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +19,7 @@ export class AppComponent {
   wybrany: number = 0;
   kolory: string[] = ["red", "blue", "green", "purple"];
   wybranyKurs:number=0;
+  kursy:Szkolenie[]=Szkolenia.Kursy;
 
 
   zwieksz(): void {
@@ -31,6 +34,7 @@ export class AppComponent {
       this.wybrany = 0;
     }
   }
+  
   
 }
 

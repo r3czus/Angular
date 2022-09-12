@@ -38,10 +38,10 @@
 <br>
  <p>Wybierz kurs którego szczegóły chcesz wyświtlić </p>
  <select [(ngModel)]="wybranyKurs">
-  <option *ngFor="let kurs of kursyProgramowanie">
-    {{kurs}}
+  <option *ngFor="let kurs of kursy,let wybranyKurs=index" value="{{wybranyKurs}}">
+    {{kurs.getTytul()}}
   </option>
  </select>
- <app-kurs>
+ <app-kurs [aktualny]="wybranyKurs">
   <!-- zeby wyswietlić app dajesz app- i nazwa tej klasy -->
  </app-kurs>
